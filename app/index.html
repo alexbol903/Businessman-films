@@ -1,105 +1,94 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<title>Businessman Films</title>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link
-			rel="stylesheet"
-			href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-			integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="/css/style.css" />
-	</head>
-	<body>
-			<header class="header container">
-				<div class="logo">
-					<a href="#" class="logo__link">
-						<img class="logo__img" src="img/logo.png" alt="Logo" />
-					</a>
-				</div>
-				<nav class="menu">
-					<ul class="menu__list">
-						<li class="menu__item">
-							<a href="#" class="menu__link">Почему&nbsp;мы</a>
-						</li>
-						<li class="menu__item"><a href="#" class="menu__link">Цены</a></li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">Примеры</a>
-						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">Контакты</a>
-						</li>
-					</ul>
-				</nav>
-				<div class="callback">
-					<p class="callback__phone">+7 (913) 082 89 69</p>
-					<a href="" class="callback__btn btn btn--blue">Заказать&nbsp;звонок</a>
-				</div>
-			</header>
-		<main>
-			<section class="section__first-screen">
-				<div class="bg-video">
-					<video class="bg-video__content" autoplay muted loop>
+
+<head>
+    <title>Businessman Films</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <header class="header container">
+        <div class="logo">
+            <a href="#" class="logo__link">
+                <img class="logo__img" src="img/logo.png" alt="Logo" />
+            </a>
+        </div>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Почему&nbsp;мы</a>
+                </li>
+                <li class="menu__item"><a href="#" class="menu__link">Цены</a></li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Примеры</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="callback">
+            <p class="callback__phone">+7 (913) 082 89 69</p>
+            <a href="" class="callback__btn btn btn--blue">Заказать&nbsp;звонок</a>
+        </div>
+    </header>
+    <main>
+        <section class="section__first-screen">
+            <div class="bg-video">
+                <video class="bg-video__content" autoplay muted loop>
 						<source src="img/background_video.mp4" type="video/mp4" />
 						<source src="img/background_video.webm" type="video/webm" />
 						Ваш браузер не поддерживает проигрывание видео фоном!
 					</video>
-				</div>
-				<div class="container py-0 py-md-5">
-					<div class="row">
-						<div class="col text-center py-0 py-sm-5 ">
-							<h1 class="heading text-uppercase text-light pt-5 px-5">
-								Эффективный видеоролик поможет увеличить продажи в несколько раз
-							</h1>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col">
-							<p
-								class="text-white w-75 text-center m-auto font-weight-light first-screen__text"
-							>
-								Бесплатно предложим идею, проконсультируем и составим смету.
-								<br />
-								Просто оставте заявку и менеджер свяжется с вами!
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
+            </div>
+            <div class="container py-0 py-md-5">
+                <div class="row">
+                    <div class="col text-center py-0 py-sm-5 ">
+                        <h1 class="heading text-uppercase text-light pt-5 px-5">
+                            Эффективный видеоролик поможет увеличить продажи в несколько раз
+                        </h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="text-white w-75 text-center m-auto font-weight-light first-screen__text">
+                            Бесплатно предложим идею, проконсультируем и составим смету.
+                            <br /> Просто оставте заявку и менеджер свяжется с вами!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-		<!-- MODALS -->
+    <!-- MODALS -->
 
-		<!-- MODAL CALL BACK -->
-		<div class="modal fade text-dark" id="callbackModal">
-			<div class="modal-dialog">
-				<div class="modal-content px-4 py-3">
-					<button class="close align-self-end" data-dismiss="modal">
+    <!-- MODAL CALL BACK -->
+    <div class="modal fade text-dark" id="callbackModal">
+        <div class="modal-dialog">
+            <div class="modal-content px-4 py-3">
+                <button class="close align-self-end" data-dismiss="modal">
 						<span>&times;</span>
 					</button>
-					<div
-						class="modal-header text-center px-3 py-0 d-flex flex-column align-items-center border--none"
-					>
-						<h4 class="modal-title h3 font-weight-bold mb-2">
-							Мы вам позвоним!
-						</h4>
-						<p class="modal-text mb-1">
-							Менеджер свяжется с Вами в бдижайшие несколько минут и подробно
-							проконсультирует!
-						</p>
-					</div>
-					<div class="modal-body text-center">
-						<form>
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Имя" />
-							</div>
-							<div class="form-group text-left">
-								<input type="tel" class="form-control" placeholder="Телефон" />
-								<span class="text-muted discr__phone"
-									>должен начинаться на +7</span
+                <div class="modal-header text-center px-3 py-0 d-flex flex-column align-items-center border--none">
+                    <h4 class="modal-title h3 font-weight-bold mb-2">
+                        Мы вам позвоним!
+                    </h4>
+                    <p class="modal-text mb-1">
+                        Менеджер свяжется с Вами в бдижайшие несколько минут и подробно проконсультирует!
+                    </p>
+                </div>
+                <div class="modal-body text-center">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Имя" />
+                        </div>
+                        <div class="form-group text-left">
+                            <input type="tel" class="form-control" placeholder="Телефон" />
+                            <span class="text-muted discr__phone">должен начинаться на +7</span
 								>
 							</div>
 							<button type="submit" class="btn btn-success px-3 py-2 mt-3">
@@ -113,7 +102,6 @@
 
 		<script src="/js/jquery.min.js"></script>
 		<script type="module" src="/js/popper.min.js"></script>
-		<script src="/js/bootstrap.min.js"></script>
 		<script src="/js/script.min.js"></script>
 	</body>
 </html>
