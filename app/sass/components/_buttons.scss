@@ -1,0 +1,32 @@
+.btn {
+  border-radius: .4em;
+  padding: .8rem 1.4rem;
+
+
+  &--white {
+		color: $color-blue;
+		background-color: $color-white;
+		border-color: $color-white;
+	}
+  &--blue {
+		color: $color-white;
+    background-color: $color-blue;
+    border: .2rem solid $color-blue;
+    transition: all .3s;
+    
+    &:hover {
+      background-color: $color-white;
+      color: $color-blue;
+    }
+	}
+
+  &--orange {
+		color: $color-white;
+		background-color: $color-orange;
+		border-color: $color-orange;
+	}
+
+  // &--radius {
+  //   border-radius: ;
+  // }
+}

@@ -1,0 +1,67 @@
+.menu {
+	flex: 1 1 60vw;
+	padding: 0 2rem;
+
+	@include respond(570) {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 30vw;
+		z-index: 1000;
+    height: 20vh;
+    padding: 0;
+		background-image: linear-gradient(10deg, transparent 10%, 10%, $color-white 80%);
+		&__item {
+      margin-top: 1.5rem;
+		}
+	}
+  
+	&__list {
+    display: flex;
+		justify-content: space-around;
+		align-items: center;
+		list-style: none;
+		text-decoration: none;
+		height: 100%;
+		@include respond(570) {
+      flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-end;
+			background-color: transparent;
+      
+		}
+	}
+
+	&__link {
+		position: relative;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: $color-grey;
+		font-size: 1.5rem;
+		transition: all 0.3s;
+
+		&::before {
+			content: '';
+			width: 0;
+			height: 0.4rem;
+			position: absolute;
+			bottom: -0.7rem;
+			left: 0;
+			color: $color-grey-dark;
+			background-color: $color-grey-dark;
+			opacity: 0;
+			transition-delay: width 0.4s;
+			transition: opacity 0.2s, width 0.3s cubic-bezier(1, 0, 0, 1) 0.1s;
+		}
+
+		&:hover::before {
+			content: '';
+			opacity: 0.6;
+			width: 100%;
+		}
+
+		&:hover {
+			color: $color-grey-dark;
+		}
+	}
+}

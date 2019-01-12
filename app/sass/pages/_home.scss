@@ -1,0 +1,12 @@
+.section__first-screen {
+	position: relative;
+  height: 101vh;
+
+	@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon (0 0)) {
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+		clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+		height: 101vh;
+  }
+  
+
+}
