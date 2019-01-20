@@ -1,11 +1,31 @@
 .section__first-screen {
 	color: $color-white;
-  text-align: center;
+	text-align: center;
   position: relative;
   
-	.skills-slide {
+	@include respond-max(768) {
+    min-height: 70rem;
+	}
+
+	/*.skills-slide {
 		height: 16rem;
-		width: 100%;
+    width: 100%;
+    @include respond-max(768) {
+    min-height: 10rem;
+	}
+	}*/
+}
+
+.first-screen__text {
+	font-size: 2.2rem;
+	font-weight: 300;
+	line-height: 1.8;
+	width: 100%;
+  margin-top: 3em;
+  padding: 0 1em;
+
+	@include respond-max(768) {
+		font-size: 2rem;
 	}
 }
 
@@ -14,7 +34,7 @@
 	justify-content: space-around;
 	align-items: center;
 	width: 60%;
-	margin-top: 4rem;
+	padding-top: 3em;
 	font-size: 2rem;
 	text-transform: uppercase;
 
@@ -22,7 +42,6 @@
 		flex-direction: column;
 		width: 70%;
 		&__link {
-			display: block;
 			width: 100%;
 			margin-bottom: 2em;
 		}

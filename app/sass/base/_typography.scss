@@ -44,17 +44,4 @@
 	}
 }
 
-.first-screen__text {
-	font-size: 2.2rem;
-	font-weight: 300;
-	line-height: 1.8;
-	width: 100%;
 
-	@include respond-max(768) {
-		font-size: 2rem;
-		padding: 0 2rem;
-	}
-	@include respond-max(470) {
-		padding: 0 2rem;
-	}
-}
