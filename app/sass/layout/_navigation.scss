@@ -18,7 +18,8 @@
 		@include respond-max(570) {
 			position: absolute;
 			animation: menu-slide 0.5s normal;
-			transform: translateX(-114%);
+      transform: translateX(-114%);
+      display: flex;
 		}
 	}
 
@@ -53,20 +54,23 @@
 		padding-right: 4rem;
 		padding-bottom: 3rem;
 		padding-top: 1.2rem;
-		width: 17rem;
-		bottom: -22rem;
-		right: -22rem;
+		width: 27rem;
+		bottom: -31rem;
+		right: -31rem;
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-end;
 		background-color: $color-white-bg;
 		border-bottom-left-radius: 1rem;
-		color: $color-black;
-
+    color: $color-black;
+    display: none;
 		z-index: 1000;
 
 		&__item {
-			margin-top: 2.5rem;
+      margin-top: 2.5rem;
+      @include respond-max(570) {
+        margin-top: 3.5rem;
+      }
 		}
 	}
 
@@ -78,7 +82,10 @@
 			text-transform: uppercase;
 			color: $color-grey;
 			font-size: 1.5rem;
-			transition: color 0.3s;
+      transition: color 0.3s;
+      @include respond-max(570) {
+        font-size: 2.5rem;
+      }
 
 			&::before {
 				content: '';
