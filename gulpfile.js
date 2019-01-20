@@ -17,18 +17,15 @@ var rootWatch = 'app/*.html';
 var scssWatch = 'app/sass/**/*.scss';
 var scssMain = 'app/sass/main.scss';
 var jsWatch = 'app/js/**/*.js';
-// var fontWatch = 'app/font/**/*';
 var imgWatch = 'app/img/**/*';
 
 // Vendors path
 var jqueryLibs = 'app/libs/jquery/dist/jquery.min.js';
-var poperLibs = 'app/libs/popper.js/dist/popper.min.js';
 
 // File paths DIST
 var rootPath = 'dist/';
 var cssPath = 'dist/css/';
 var jsPath = 'dist/js/';
-// var fontPath = 'dist/font/';
 var imgPath = 'dist/img/';
 
 // Root
@@ -83,13 +80,12 @@ function scssW(done) {
 				this.emit('end');
 			})
 		)
-		.pipe(sass({}))
+		.pipe(sass())
 		.pipe(
 			autoprefixer({
 				browsers: 'last 5 version'
 			})
 		)
-		.pipe(sourcemaps.write())
 		.pipe(concat('style.css'))
 		.pipe(dest(cssPath))
 		.pipe(browserSync.stream());
@@ -99,27 +95,22 @@ function scssW(done) {
 // Scripts
 function js(done) {
 	src(jsWatch)
-		.pipe(
-			plumber(function(err) {
+		.pipe(plumber(function(err) {
 				console.log('Styles Task Error');
 				console.log(err);
 				this.emit('end');
-			})
-		)
+			}))
 		.pipe(sourcemaps.init())
-		.pipe(
-			babel({
-				presets: ['@babel/env']
-			})
-		)
+		.pipe(babel({ presets: ['@babel/env'] }))
 		.pipe(uglify())
 		.pipe(sourcemaps.write())
+		.pipe(concat('script.min.js'))
 		.pipe(dest(jsPath))
 		.pipe(browserSync.stream());
 	done();
 }
 function libs(done) {
-	src([jqueryLibs, poperLibs]).pipe(dest(jsPath));
+	src(jqueryLibs).pipe(dest(jsPath));
 	done();
 }
 

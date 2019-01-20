@@ -1,0 +1,92 @@
+.callback-form,
+.request-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	padding-top: 0.5em;
+
+	&__input {
+		border-radius: 0.3em;
+		width: 100%;
+		height: 2.3em;
+		border: 0.1em solid $color-grey-1;
+		box-shadow: 0 0 0.3rem $color-grey-1;
+		margin-bottom: 1em;
+		padding: 0 0.8em;
+
+		&:focus {
+			outline: 2px solid $color-green;
+			outline-offset: 2px;
+		}
+	}
+
+	&__desc {
+		font-size: 0.8em;
+		opacity: 0.6;
+		align-self: flex-start;
+		margin-left: 0.3em;
+	}
+
+	&__btn {
+		margin-top: 1em;
+	}
+}
+
+.request-form {
+  
+	&__input:focus {
+		outline: 2px solid $color-black;
+		outline-offset: 2px;
+	}
+}
+
+.form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding-bottom: 3em;
+	@include respond-max(670) {
+		flex-direction: column;
+	}
+
+	&__heading {
+		padding-top: 3em;
+		text-shadow: 0 0 2rem $color-black;
+	}
+
+	&__input {
+		max-width: 40%;
+		height: 4rem;
+		padding: 0 1rem;
+		font-size: 1.7rem;
+		margin-right: 3rem;
+
+		@include respond-max(670) {
+			margin-right: 0;
+			margin-bottom: 3rem;
+			max-width: 60%;
+			width: 100%;
+			text-align: center;
+		}
+		@include respond-max(470) {
+			max-width: 90%;
+			width: 100%;
+			text-align: center;
+		}
+
+		&:focus {
+			outline: 2px solid $color-orange;
+			outline-offset: 3px;
+		}
+	}
+
+	&__btn {
+		font-size: 1.8rem;
+		@include respond-max(670) {
+			padding: 0.6em 3em;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+@keyframes menu-slide {
+	0% {
+		transform: translateX(0%);
+	}
+	80% {
+		transform: translateX(-120%);
+	}
+	95% {
+		transform: translateX(-111%);
+	}
+	100% {
+		transform: translateX(-114%);
+	}
+}
+
+@keyframes modal-slide {
+	0% {
+		transform: translateY(0%);
+	}
+	100% {
+		transform: translateY(157%);
+	}
+}

@@ -1,12 +1,13 @@
 .header {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	padding-top: 1rem;
-	padding-bottom: 1rem;
+  padding-bottom: 1rem;
+  background-color: $color-white;
 
-	@include respond(570) {
+	@include respond-max(570) {
 		position: relative;
-		flex-wrap: wrap;
 	}
 }
 
@@ -16,13 +17,30 @@
 		align-items: center;
 		height: 100%;
 		width: 100%;
+		@include respond-max(570) {
+      max-width: 80vw;
+      width: 80vw;
+    }
+    
+    &,
+    &:focus {
+      outline: 2px solid $color-blue;
+      outline-offset: 2px;
+    }
 	}
 
 	&__img {
-		max-height: 100%;
-		@include respond(1000) {
-			max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+		@include respond-max(1000) {
+      max-width: 100%;
+      width: 100%;
 		}
+	}
+
+	&:focus {
+		outline: 2px solid $color-blue;
+		outline-offset: 2px;
 	}
 }
 
@@ -32,9 +50,10 @@
 	align-items: center;
 	justify-content: space-between;
 	font-size: 1.6rem;
-	margin-left: 1.8rem;
+  margin-left: 1.8rem;
+  height: 6.5rem;
 
-	@include respond(768) {
+	@include respond-max(768) {
 		display: none;
 	}
 
@@ -45,7 +64,6 @@
 	}
 
 	&__btn {
-		text-decoration: none;
 		text-transform: uppercase;
 		margin-top: 0.4em;
 	}

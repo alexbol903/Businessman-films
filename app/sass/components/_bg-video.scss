@@ -8,7 +8,7 @@
 	opacity: 1;
 	overflow: hidden;
 
-	&::after {
+	&::before {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -19,10 +19,7 @@
 	}
 
 	&__content {
-		width: 100%;
-		@supports (object-fit: cover) {
-			height: 100%;
-			object-fit: cover;
-		}
+    object-fit: cover;
+		
 	}
 }

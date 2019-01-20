@@ -1,0 +1,14 @@
+.section__briff {
+  background-color: $color-white;
+  display: block;
+}
+
+.briff {
+  background-color: $color-white;
+  height: 100%;
+	&__img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+	}
+}

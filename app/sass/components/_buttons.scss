@@ -1,32 +1,73 @@
 .btn {
-  border-radius: .4em;
-  padding: .8rem 1.4rem;
+	padding: 0.8rem 1.4rem;
+	box-shadow: none;
+	cursor: pointer;
+	transition: all 0.3s;
+	color: $color-white;
 
+	&:hover,
+	&:focus {
+		background-color: transparent;
+		outline: none;
+	}
 
-  &--white {
+	&--radius-s {
+		border-radius: 0.4em;
+	}
+
+	&--radius-x {
+		border-radius: 30rem;
+		padding: 1.5rem 2.5rem;
+	}
+
+	&--white {
 		color: $color-blue;
 		background-color: $color-white;
-		border-color: $color-white;
-	}
-  &--blue {
-		color: $color-white;
-    background-color: $color-blue;
-    border: .2rem solid $color-blue;
-    transition: all .3s;
-    
-    &:hover {
-      background-color: $color-white;
-      color: $color-blue;
-    }
+    border: 0.2rem solid $color-white;
+    border-color: $color-white;
+		&:hover,
+		&:focus {
+			color: $color-white;
+		}
 	}
 
-  &--orange {
-		color: $color-white;
+	&--blue {
+		background-color: $color-blue;
+    border: 0.2rem solid $color-blue;
+    border-color: $color-blue;
+		&:hover,
+		&:focus {
+			color: $color-blue;
+		}
+	}
+
+	&--orange {
 		background-color: $color-orange;
+		border: 0.2rem solid $color-blue;
 		border-color: $color-orange;
+		&:hover,
+		&:focus {
+			color: $color-orange;
+		}
 	}
 
-  // &--radius {
-  //   border-radius: ;
-  // }
+	&--green {
+		background-color: $color-green;
+    border: 0.2rem solid $color-green;
+    border-color: $color-green;
+		&:hover,
+		&:focus {
+			color: $color-green;
+		}
+  }
+  
+	&--black {
+		background-color: $color-black;
+		border: 0.2rem solid $color-black;
+		border-color: $color-black;
+		&:hover,
+		&:focus {
+			color: $color-black;
+		}
+	}
 }

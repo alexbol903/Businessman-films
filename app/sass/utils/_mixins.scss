@@ -1,5 +1,15 @@
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-@mixin respond($breakpoint) {
+@mixin respond-max($breakpoint) {
  
     @media only screen and (max-width: $breakpoint + "px") { @content }
+}
+@mixin respond-min($breakpoint) {
+ 
+    @media only screen and (min-width: $breakpoint + "px") { @content }
 }

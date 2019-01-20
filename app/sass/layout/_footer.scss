@@ -1,0 +1,80 @@
+.footer {
+	background-color: $color-black;
+	position: relative;
+	color: $color-white;
+
+	padding-bottom: 6em;
+
+	::selection {
+		background-color: $color-orange;
+		color: $color-white;
+	}
+}
+
+.contacts {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	&__heading {
+		font-size: 7rem;
+		padding-top: 1.2em;
+		padding-bottom: 0.5em;
+	}
+
+	&__btn {
+		padding: 1em 2em;
+		font-size: 1.7rem;
+		text-align: center;
+		margin-top: 2.5em;
+	}
+}
+
+.info-block {
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	width: 50%;
+
+	@include respond-max(768) {
+		width: 100%;
+	}
+}
+.address {
+	text-align: right;
+	margin-right: 7em;
+
+	@include respond-max(470) {
+		margin-right: 3em;
+	}
+
+	&__title {
+		text-align: inherit;
+	}
+	&__text {
+		font-weight: 300;
+	}
+}
+
+.contact {
+	text-align: left;
+	&__title {
+		text-align: inherit;
+	}
+}
+
+.address,
+.contact {
+	max-width: 49%;
+
+	&__title {
+		margin-bottom: 1.5em;
+		font-size: 2rem;
+	}
+
+	&__text {
+		font-size: 2rem;
+		margin-bottom: 0.5em;
+	}
+}
