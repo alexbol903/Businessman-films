@@ -80,7 +80,11 @@ function scssW(done) {
 				this.emit('end');
 			})
 		)
-		.pipe(sass())
+		.pipe(
+			sass({
+				outputStyle: 'expanded'
+			})
+		)
 		.pipe(
 			autoprefixer({
 				browsers: 'last 5 version'
@@ -95,11 +99,13 @@ function scssW(done) {
 // Scripts
 function js(done) {
 	src(jsWatch)
-		.pipe(plumber(function(err) {
+		.pipe(
+			plumber(function(err) {
 				console.log('Styles Task Error');
 				console.log(err);
 				this.emit('end');
-			}))
+			})
+		)
 		.pipe(sourcemaps.init())
 		.pipe(babel({ presets: ['@babel/env'] }))
 		.pipe(uglify())
