@@ -30,7 +30,7 @@ html {
 body {
   box-sizing: border-box;
   background-color: $color-white;
-  width: 100vw;
+  width: 100%;
 }
 
 a {
@@ -52,7 +52,7 @@ a {
 	margin: auto;
 	padding-left: 2rem;
 	padding-right: 2rem;
-  height: 100%;
+  min-height: 100%;
 
 	@include respond-max(850) {
 		height: 65%;
