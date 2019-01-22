@@ -53,20 +53,21 @@
 		text-align: inherit;
 	}
 	&__text {
-		font-weight: 300;
+    font-weight: 300;
 	}
 }
 
 .contact {
-	text-align: left;
+  text-align: left;
 	&__title {
-		text-align: inherit;
+    text-align: inherit;
 	}
 }
 
 .address,
 .contact {
-	max-width: 49%;
+  max-width: 49%;
+  color: $color-white;
 
 	&__title {
 		margin-bottom: 1.5em;
