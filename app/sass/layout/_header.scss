@@ -5,6 +5,7 @@
 	padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: $color-white;
+  height: 9rem;
 
 	@include respond-max(570) {
 		position: relative;
@@ -16,12 +17,7 @@
 		display: flex;
 		align-items: center;
 		height: 100%;
-		width: 100%;
-		@include respond-max(570) {
-      max-width: 80vw;
-      width: 80vw;
-    }
-    
+		min-width: 80%;
     &,
     &:focus {
       outline: 2px solid $color-blue;

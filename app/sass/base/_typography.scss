@@ -7,10 +7,10 @@
 	width: 100%;
 
 	@include respond-max(1000) {
-		font-size: 6rem;
+		font-size: 5rem;
 	}
 	@include respond-max(470) {
-		font-size: 5rem;
+		font-size: 4rem;
 		padding-top: 1em;
 	}
 }

@@ -1,17 +1,18 @@
 .nav {
+  width: 60%;
 	flex: 1 1 60%;
 	&__checkbox {
-		display: none;
+    display: none;
 	}
 	&-container {
-		display: flex;
+    display: flex;
 		align-items: center;
 		@include respond-max(570) {
-			position: relative;
-			align-self: stretch;
-			width: 15vw;
-      flex: 0 0 auto;
-      height: 6vh;
+      position: relative;
+      align-self: stretch;
+      justify-content: flex-end;
+		  width: 20%;
+      flex: 0 1 20%;
 		}
 	}
 	&__checkbox:checked ~ .menu {
@@ -28,8 +29,8 @@
 		@include respond-max(570) {
 			display: flex;
 			justify-content: center;
-			align-items: center;
-			width: 100%;
+      align-items: center;
+      width: 100%;
 			height: 100%;
 			z-index: 2000;
 			color: $color-grey-dark;
@@ -44,6 +45,7 @@
 	list-style: none;
 	text-decoration: none;
   width: 100%;
+  height: 31rem;
 	padding: 0 1.5rem;
 	transition: all 0.3s;
 	@include respond-max(670) {
@@ -56,7 +58,7 @@
 		padding-top: 1.2rem;
 		width: 27rem;
 		bottom: -31rem;
-		right: -31rem;
+		right: -33rem;
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-end;
