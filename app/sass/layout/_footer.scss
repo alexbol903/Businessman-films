@@ -61,21 +61,24 @@
   text-align: left;
 	&__title {
     text-align: inherit;
-	}
+  }
+  
+ 
 }
 
 .address,
 .contact {
   max-width: 49%;
-  color: $color-white;
-
+  
 	&__title {
-		margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 		font-size: 2rem;
 	}
-
+  
 	&__text {
-		font-size: 2rem;
+    font-size: 2rem;
 		margin-bottom: 0.5em;
+    color: $color-white;
+    display: block;
 	}
 }
