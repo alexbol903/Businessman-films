@@ -1931,6 +1931,14 @@ a, a:link, a:hover, a:focus {
   text-align: inherit;
 }
 
+.contact__link:focus {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: 1px solid #F2704E;
+  outline-offset: 1px;
+}
+
 .address,
 .contact {
   max-width: 49%;
