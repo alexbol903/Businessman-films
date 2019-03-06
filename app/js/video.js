@@ -1,4 +1,6 @@
-function findVideos() {
+(function () {
+  
+  function findVideos() {
   let videos = document.querySelectorAll('.video');
 
   for (let i = 0; i < videos.length; i++) {
@@ -50,3 +52,4 @@ function generateURL(id) {
 }
 
 findVideos();
+}());
