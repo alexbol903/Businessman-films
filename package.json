@@ -1,28 +1,22 @@
 {
-  "name": "businessman-films",
-  "version": "1.0.0",
-  "description": "Project for businessman-films",
-  "main": "index.js",
-  "scripts": {},
-  "author": "Alexbol903",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "babelify": "^10.0.0",
-    "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-image": "^4.4.1",
-    "gulp-livereload": "^4.0.1",
-    "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.1"
-  },
-  "dependencies": {
-    "static-server": "^2.2.1"
-  }
+	"name": "businessman-films",
+	"version": "1.0.0",
+	"description": "Reall project for video prodaction studio",
+	"main": "index.js",
+	"scripts": {
+		"build": "webpack --mode production",
+		"dev": "webpack-dev-server --open --mode development"
+	},
+	"author": "alexbol",
+	"license": "ISC",
+	"dependencies": {
+		"sal.js": "^0.5.0"
+	},
+	"devDependencies": {
+		"html-loader": "^0.5.5",
+		"html-webpack-plugin": "^3.2.0",
+		"webpack": "^4.29.6",
+		"webpack-cli": "^3.2.3",
+		"webpack-dev-server": "^3.2.1"
+	}
 }
