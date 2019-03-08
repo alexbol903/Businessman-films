@@ -1,0 +1,39 @@
+.section__form {
+	position: relative;
+	color: $color-orange;
+	background-color: rgba(60, 60, 60, 0.7);
+	text-align: center;
+  padding-bottom: 9em;
+  z-index: 1;
+
+	::selection {
+		background-color: $color-orange;
+		color: $color-white;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url('/assets/img/bg-form.jpg');
+		background-size: cover;
+		background-position: 50% 0;
+		background-repeat: no-repeat;
+		z-index: -1;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+    background-color: rgba(60, 60, 60, 0.7);
+    z-index: -1;
+	}
+}
+
+

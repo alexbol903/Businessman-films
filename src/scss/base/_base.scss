@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=cyrillic');
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+  box-sizing: inherit;
+  border: none;  
+}
+
+html {
+	// This defines what 1rem is
+	font-size: 62.5%; // 1rem = 10px;
+	font-family: 'Roboto', sans-serif;
+
+	@include respond-max(1000) {
+		font-size: 56.25%;
+	}
+
+	@include respond-max(850) {
+		font-size: 50%;
+	}
+
+	@include respond-max(670) {
+		font-size: 43.75%;
+	}
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $color-white;
+  width: 100%;
+}
+
+a {
+  &,
+  &:link,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+// h1,h2,h3,h4,h5,h6,p {width: 100%;}
+
+
+.container {
+  max-width: 117rem;
+  width: 100%;
+	margin: auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+  min-height: 100%;
+
+	@include respond-max(850) {
+		max-height: 65%;
+	}
+	@include respond-max(570) {
+		max-height: 90%;
+	}
+}
