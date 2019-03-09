@@ -5,9 +5,10 @@
 	"main": "index.js",
 	"scripts": {
     "gulp": "gulp",
-    "webpack": "webpack --config ./build/webpack.build.config.js",
-    "build": "npm-run-all gulp webpack",
-    "dev": "webpack-dev-server --open --config ./build/webpack.dev.config.js"
+    "webpack-build": "webpack --config ./build/webpack.build.config.js",
+    "build": "npm-run-all gulp webpack-build",
+    "webpack-dev": "webpack-dev-server --open --config ./build/webpack.dev.config.js",
+    "dev": "npm-run-all gulp webpack-dev"
 	},
 	"browserslist": [
 		"> 1%",

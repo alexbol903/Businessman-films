@@ -8,5 +8,6 @@ Technologes for bilding:
 -JS
 -JQUERY
 -SASS
+-WEBPACK
 -GULP
 -NPM
