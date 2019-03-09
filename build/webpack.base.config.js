@@ -34,8 +34,9 @@ module.exports = {
 				exclude: '/node_modules/'
 			},
 			{
-        test: /\.(png|jpe?g|gif|svg|webp)$/,
+        // test: /\.(png|jpe?g|gif|svg|webp)$/,
         loader: 'file-loader',
+        exclude: '/img/',
         options: {
           name: '[name].[ext]'
         }
@@ -105,7 +106,7 @@ module.exports = {
 			filename: './index.html'
 		}),
 		new CopyWebpackPlugin([
-			{ from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
+			// { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/static`, to: `${PATHS.assets}static` }
     ])
 	]
