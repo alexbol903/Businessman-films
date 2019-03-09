@@ -16,7 +16,7 @@
 				data-sal-delay="600"
 				data-sal-easing="ease-out-bounce"
 			>
-				<a href="#" class="logo__link">
+				<a href="/" class="logo__link">
 					<img class="logo__img" src="/assets/img/logo.png" alt="Logo" />
 				</a>
 			</div>
@@ -42,12 +42,12 @@
 				</label>
 				<ul class="menu">
 					<li class="menu__item">
-						<a href="#" class="menu__link">Почему&nbsp;мы</a>
+						<button class="menu__link btnSkills">Почему&nbsp;мы</button>
 					</li>
-					<li class="menu__item"><a href="#" class="menu__link">Цены</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">Примеры</a></li>
+					<li class="menu__item"><button class="menu__link btnPrice">Цены</button></li>
+					<li class="menu__item btnProjects"><button class="menu__link">Примеры</button></li>
 					<li class="menu__item">
-						<a href="#" class="menu__link">Контакты</a>
+						<button class="menu__link btnContacts">Контакты</button>
 					</li>
 				</ul>
 			</nav>
@@ -92,8 +92,7 @@
 					</p>
 					<div class="btn-group">
 						<a
-							href="#projects"
-							class="btn btn--blue btn--radius-x btn-group__link"
+							class="btn--blue btn btn--radius-x btn-group__link btnProjects"
 							data-sal-duration="1200"
 							data-sal="slide-right"
 							data-sal-delay="600"
@@ -102,8 +101,7 @@
 							Примеры&nbsp;работ
 						</a>
 						<a
-							href="#price"
-							class="btn btn--white btn--radius-x btn-group__link"
+							class="btn--white btn btn--radius-x btn-group__link btnPrice"
 							data-sal-duration="1200"
 							data-sal="slide-left"
 							data-sal-delay="600"
@@ -135,7 +133,7 @@
 				</h3>
 				<img src="/assets/img/brif.png" alt="Бриф" class="briff__img" />
 			</section>
-			<section class=" section__skills">
+			<section id="skills" class=" section__skills">
 				<div class="container section__container">
 					<h3
 						class="secondary-heading"
@@ -1147,7 +1145,7 @@
 			</section>
 		</main>
 		<footer class="footer">
-			<div class="container contacts">
+			<div id="contacts" class="container contacts">
 				<h3
 					class="secondary-heading contacts__heading"
 					data-sal-duration="800"

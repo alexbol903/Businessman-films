@@ -1,8 +1,13 @@
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .btn {
 	padding: 0.8rem 1.4rem;
 	box-shadow: none;
 	cursor: pointer;
-	transition: all 0.3s;
+	transition: all 0.3s !important;
 	color: $color-white;
 
 	&:hover,

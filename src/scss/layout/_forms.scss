@@ -14,7 +14,8 @@
 		border: 0.1em solid $color-grey-1;
 		box-shadow: 0 0 0.3rem $color-grey-1;
 		margin-bottom: 1em;
-		padding: 0 0.8em;
+    padding: 0 0.8em;
+    
 
 		&:focus {
 			outline: 2px solid $color-green;
@@ -62,7 +63,8 @@
 		height: 4rem;
 		padding: 0 1rem;
 		font-size: 1.7rem;
-		margin-right: 3rem;
+    margin-right: 3rem;
+    box-shadow: 0 0 1rem $color-black;
 
 		@include respond-max(670) {
 			margin-right: 0;
@@ -79,7 +81,8 @@
 
 		&:focus {
 			outline: 2px solid $color-orange;
-			outline-offset: 3px;
+      outline-offset: 3px;
+      box-shadow: none;
 		}
 	}
 
