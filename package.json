@@ -5,10 +5,10 @@
 	"main": "index.js",
 	"scripts": {
 		"gulp": "gulp",
-		"webpack-build": "webpack --config ./build/webpack.build.config.js",
-		"build": "npm-run-all gulp webpack-build",
-		"webpack-dev": "webpack-dev-server --open --config ./build/webpack.dev.config.js",
-		"dev": "npm-run-all gulp webpack-dev"
+		"build": "webpack --config ./config/webpack.build.config.js",
+		"webpack-build": "npm-run-all gulp webpack-build",
+		"dev": "webpack-dev-server --open --config ./config/webpack.dev.config.js",
+		"webpack-dev": "npm-run-all gulp webpack-dev"
 	},
 	"browserslist": [
 		"> 1%",
@@ -18,7 +18,8 @@
 	"license": "ISC",
 	"dependencies": {
 		"jump.js": "^1.0.2",
-		"sal.js": "^0.5.0"
+		"sal.js": "^0.5.0",
+		"tingle.js": "^0.14.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.3.4",

@@ -1,6 +1,6 @@
 button {
-  background-color: transparent;
-  cursor: pointer;
+	background-color: transparent;
+	cursor: pointer;
 }
 
 .btn {
@@ -28,8 +28,8 @@ button {
 	&--white {
 		color: $color-blue;
 		background-color: $color-white;
-    border: 0.2rem solid $color-white;
-    border-color: $color-white;
+		border: 0.2rem solid $color-white;
+		border-color: $color-white;
 		&:hover,
 		&:focus {
 			color: $color-white;
@@ -38,8 +38,8 @@ button {
 
 	&--blue {
 		background-color: $color-blue;
-    border: 0.2rem solid $color-blue;
-    border-color: $color-blue;
+		border: 0.2rem solid $color-blue;
+		border-color: $color-blue;
 		&:hover,
 		&:focus {
 			color: $color-blue;
@@ -58,14 +58,14 @@ button {
 
 	&--green {
 		background-color: $color-green;
-    border: 0.2rem solid $color-green;
-    border-color: $color-green;
+		border: 0.2rem solid $color-green;
+		border-color: $color-green;
 		&:hover,
 		&:focus {
 			color: $color-green;
 		}
-  }
-  
+	}
+
 	&--black {
 		background-color: $color-black;
 		border: 0.2rem solid $color-black;
@@ -75,4 +75,42 @@ button {
 			color: $color-black;
 		}
 	}
+}
+
+.scroll-up {
+  opacity: 0;
+  transition: opacity .4s;
+  bottom: 5rem;
+  left: 5rem;
+  position: fixed;
+	width: 7rem;
+	height: 7rem;
+  background-color: rgba($color-blue, 0.7);
+  border-radius: .6em;
+  z-index: 9999;
+
+  &:hover &__icon {
+    animation: scroll-up__arrow .7s linear infinite;
+  }
+
+	&__icon {
+		fill: $color-white;
+		width: 3rem;
+    margin-bottom: 0.1em;
+    transition: width .2s;
+    position: absolute;
+    top: .6em;
+    left: 50%;
+    transform: translateX(-50%);
+	}
+
+	&__text {
+    position: relative;
+    bottom: -1em;
+    color: $color-white;
+  }
+  
+  &--active {
+    opacity: 1;
+  }
 }

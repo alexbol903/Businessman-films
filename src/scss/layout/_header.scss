@@ -47,7 +47,7 @@
 	justify-content: space-between;
 	font-size: 1.6rem;
   margin-left: 1.8rem;
-  height: 6.5rem;
+  width: 15em;
 
 	@include respond-max(768) {
 		display: none;
