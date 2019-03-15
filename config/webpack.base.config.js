@@ -23,7 +23,7 @@ module.exports = {
 	output: {
 		filename: `${PATHS.assets}js/[name].js`,
 		path: PATHS.dist,
-		publicPath: ''
+		publicPath: '/'
 	},
 
 	module: {
@@ -102,7 +102,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: false,
       template: `${PATHS.src}/index.html`,
-      filename: './index.html'
+      filename: `./index.html`
 		}),
 		new CopyWebpackPlugin([
 			// { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
