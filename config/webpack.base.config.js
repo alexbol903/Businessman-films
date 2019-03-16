@@ -5,11 +5,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 const PATHS = {
-	src: path.join(__dirname, '../src'),
-	dist: path.join(__dirname, '../dist'),
-	assets: './assets/'
+	src: path.resolve(__dirname, '../src'),
+	dist: path.resolve(__dirname, '../dist'),
+	assets: 'assets/'
 };
 
 module.exports = {
@@ -17,13 +16,11 @@ module.exports = {
 		paths: PATHS
 	},
 
-  entry: {
-    app: PATHS.src
-  },
+	entry: `${PATHS.src}/index.js`,
 	output: {
 		filename: `${PATHS.assets}js/[name].js`,
 		path: PATHS.dist,
-		publicPath: '/'
+		publicPath: './'
 	},
 
 	module: {
@@ -34,11 +31,22 @@ module.exports = {
 				exclude: '/node_modules/'
 			},
 			{
-        test: /\.(png|jpe?g|gif|svg|webp)$/,
-        loader: 'file-loader',
-          options: {
-          name: '[name].[ext]'
-        }
+				test: /\.(png|jpe?g|gif|svg|ico)$/,
+				use: {
+					loader: 'file-loader',
+					options: {
+						name: '[name].[ext]',
+						outputPath: `${PATHS.assets}img`
+					}
+				}
+			},
+			{
+				test: /\.(webm|mp4)$/,
+				loader: 'file',
+				query: {
+          name: '[name].[ext]',
+          outputPath: `${PATHS.assets}videos`
+				}
 			},
 			{
 				test: /\.scss$/,
@@ -54,7 +62,7 @@ module.exports = {
 						options: {
 							sourceMap: true,
 							config: {
-                path: `${PATHS.src}/js/postcss.config.js`
+								path: `${PATHS.src}/js/postcss.config.js`
 							}
 						}
 					},
@@ -78,7 +86,7 @@ module.exports = {
 						options: {
 							sourceMap: true,
 							config: {
-                path: `${PATHS.src}/js/postcss.config.js`
+								path: `${PATHS.src}/js/postcss.config.js`
 							}
 						}
 					}
@@ -87,26 +95,23 @@ module.exports = {
 			{
 				test: /\.html$/,
 				use: {
-					loader: 'html-loader',
-					options: { minimize: true }
+					loader: 'html-loader'
 				}
 			}
 		]
-  },
-  
+	},
 
 	plugins: [
 		new MiniCssExtractPlugin({
 			filename: `${PATHS.assets}css/[name].css`
 		}),
-    new HtmlWebpackPlugin({
-      hash: false,
-      template: `${PATHS.src}/index.html`,
-      filename: `./index.html`
+		new HtmlWebpackPlugin({
+			hash: false,
+			template: `${PATHS.src}/index.html`
 		}),
 		new CopyWebpackPlugin([
-			// { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/static`, to: `${PATHS.assets}static` }
-    ])
-  ]
+			{ from: `${PATHS.src}/videos`, to: `${PATHS.assets}videos` },
+			{ from: `${PATHS.src}/static`, to: `${PATHS.assets}static` },
+		])
+	]
 };
