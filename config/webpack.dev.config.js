@@ -6,6 +6,9 @@ const baseWebpackConfig = require('./webpack.base.config');
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   mode: 'development',
+  output: {
+    publicPath: '/'
+  },
   devtool: '#@cheap-module-eval-source-map',
 	devServer: {
     contentBase: baseWebpackConfig.externals.paths.dist,

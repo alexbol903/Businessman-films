@@ -1,5 +1,4 @@
 import jump from 'jump.js';
-import { toUnicode } from 'punycode';
 
 // Smooth scroll
 const btnSkills = document.querySelector('.btnSkills');
@@ -8,9 +7,9 @@ const btnProjects = document.querySelectorAll('.btnProjects');
 const btnContacts = document.querySelector('.btnContacts');
 
 btnSkills.addEventListener('click', () => jump('#skills'));
-btnProjects.forEach(el => el.addEventListener('click', () => jump('#projects')));
-btnPrice.forEach(el => el.addEventListener('click', () => jump('#price')));
-btnContacts.addEventListener('click', () => jump('#contacts'));
+btnProjects.forEach(el => el.addEventListener('click', () => { jump('#projects') }));
+btnPrice.forEach(el => el.addEventListener('click', () => {jump('#price')}));
+btnContacts.addEventListener('click', () => {jump('#contacts')});
 
 // Button Up
 const btnUp = document.querySelector('#scrollUp');

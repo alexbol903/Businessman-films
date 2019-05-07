@@ -5,5 +5,4 @@ import './js/popUpModals';
 
 
 import './scss/main.scss';
-import '../node_modules/sal.js/dist/sal.css';
 import '../node_modules/tingle.js/dist/tingle.min.css';
