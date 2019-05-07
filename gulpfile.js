@@ -4,7 +4,7 @@ const { src, task, dest, parallel } = require('gulp');
 var image = require('gulp-image');
 
 // // File paths APP
-var imgWatch = 'dist/assets/img/**/*';
+var imgWatch = 'src/img/**/*';
 
 // // File paths DIST
 var imgPath = 'dist/assets/img/';
