@@ -49,7 +49,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             var className = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
             var elem = arguments.length > 1 ? arguments[1] : undefined;
             var domElem = document.querySelectorAll(".".concat(className));
-            if (!domElem.length) throw new Error("Error: Class \"".concat(className, "\" is not found"));
+            if (!domElem.length) throw new Error("Class \"".concat(className, "\" is not found"));
 
             for (var i = 0; i < domElem.length; i++) {
               var item = {
@@ -137,26 +137,31 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       };
     };
 
-    var checkElements = function checkElements() {
+    var checkElements = function checkElements(event) {
       var veiwport = createViewport(),
           elem = animLP.elem,
-        param = animLP.param;
+          param = animLP.param;
       var coord, offSetTop, offSetBottom;
       elem.forEach(function (el) {
-        coord = el["class"].getBoundingClientRect();
+        var elem = el["class"];
+        coord = elem.getBoundingClientRect();
+
+        if (!elem.classList.contains('animlp') && event.type === 'load') {
+          console.warn("Warning: Need add class \"animlp\" to element - ", elem);
+        }
 
         if (!veiwport.top) {
           offSetTop = coord.top + veiwport.top;
           offSetBottom = coord.bottom + veiwport.top;
         } else {
-          offSetTop = coord.top + veiwport.top;
+          offSetTop = coord.top * param.startAnim + veiwport.top;
           offSetBottom = coord.bottom * param.startAnim + veiwport.top;
         }
-       
+
         if (offSetBottom > veiwport.top && offSetTop < veiwport.bottom) {
           createAnimation(el);
         } else if (!param.once) {
-          el["class"].classList.add('animlp');
+          elem.classList.add('animlp');
           el.isReady = true;
         }
       });
@@ -164,7 +169,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     var checkProp = function checkProp(param, name) {
       if (typeof param !== 'number') {
-        throw new Error("Error: Property \"".concat(name, "\" should be a number"));
+        throw new Error("Property \"".concat(name, "\" should be a number"));
       }
 
       return param;
@@ -180,8 +185,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       if (!elem.isReady) return;
       elem.isReady = false;
       var animText = "".concat(animation, " ").concat(duration / num, "s ").concat(func, " ").concat(delay / num, "s 1 normal forwards;");
-      el.style.cssText = "\n  -webkit-animation: ".concat(animText, "\n  -moz-animation: ").concat(animText, "\n  -ms-animation: ").concat(animText, "\n  -o-animation: ").concat(animText, "\n  animation: ").concat(animText);
-
+      el.style.cssText = "\n        -webkit-animation: ".concat(animText, "\n        -moz-animation: ").concat(animText, "\n        -ms-animation: ").concat(animText, "\n        -o-animation: ").concat(animText, "\n        animation: ").concat(animText);
       setTimeout(function () {
         el.classList.remove('animlp');
         el.removeAttribute('style');

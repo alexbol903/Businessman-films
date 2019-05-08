@@ -29,13 +29,13 @@ animLP({
       animation: 'fadeRight'
     },
     {
-      class: 'secondary-heading',
+      class: [ 'secondary-heading', 'price__title'],
       duration: 900,
       delay: 100,
       animation: 'fade'
     },
     {
-      class: [ 'skills__img-block', 'price__title'],
+      class: 'skills__img-block',
       duration: 1000,
       delay: 300,
       animation: 'fadeDown'
