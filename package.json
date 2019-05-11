@@ -16,6 +16,7 @@
 	"author": "alexbol",
 	"license": "ISC",
 	"dependencies": {
+		"animlp.js": "^0.9.2",
 		"jump.js": "^1.0.2",
 		"tingle.js": "^0.14.0"
 	},

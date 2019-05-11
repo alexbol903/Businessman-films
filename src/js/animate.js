@@ -1,4 +1,4 @@
-import animLP from './animLP';
+import animLP from 'animlp.js';
 
 
 // Animate blocks 
